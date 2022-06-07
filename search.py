@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 def euclidean_distance(p, q):
     dist = 0
@@ -64,6 +65,9 @@ def forward_selection(x, y):
     current_features = []
     best_acc = 1/(len(set(y)))
 
+    # Timer start
+    start_time = time.time()
+
     # Loop for levels
     for i in range(n_features):
         print("On search tree level: ", i+1)
@@ -87,6 +91,12 @@ def forward_selection(x, y):
         if best_so_far_acc > best_acc:
             features_selected = current_features.copy()
             best_acc = best_so_far_acc
+
+        elapsed = time.time() - start_time
+
+        # Break loop after 8 hours
+        if elapsed > (8*60*60):
+            break
 
     for i in range(len(features_selected)):
         features_selected[i] += 1
@@ -112,4 +122,4 @@ if __name__ == "__main__":
         x.append(data[i][1:])
         y.append(int(data[i][0]))
 
-    forward_selection(x, y)
+    features = forward_selection(x, y)
