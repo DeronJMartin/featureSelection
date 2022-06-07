@@ -1,6 +1,9 @@
 def neareast_neighbor():
     pass
 
+def cross_validation():
+    pass
+
 def forward_selection():
     pass
 
