@@ -2,3 +2,6 @@
 *.pdf
 /venv
 .DS_Store
+calibration1.txt
+calibration2.txt
+calibration3.txt
