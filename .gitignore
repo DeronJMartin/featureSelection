@@ -1,3 +1,4 @@
 *.pptx
 *.pdf
 /venv
+.DS_Store
