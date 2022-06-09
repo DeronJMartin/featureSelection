@@ -5,3 +5,10 @@
 calibration1.txt
 calibration2.txt
 calibration3.txt
+plot_val_bw.txt
+plot_val_fw.txt
+large_bw.txt
+large_fw.txt
+small_bw.txt
+small_fw.txt
+SampleReport.docx
